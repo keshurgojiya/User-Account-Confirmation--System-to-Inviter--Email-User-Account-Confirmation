@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark">
   <meta name="supported-color-schemes" content="light dark"> 
-  <title>User Reminder Email (System to Invitee)</title>
+  <title>User Account Confirmation (System to Inviter) Email</title>
 
   <style>
     @media only screen and (max-width:600px) {
@@ -122,21 +122,17 @@
             <td style="padding:24px;">
 
               <p style="margin:0px; font-size:16px; color:#344054; line-height:24px;">
-                Hello {{UserFirstName}},
+                Hello {{InviterName}},
               </p>
 
               <p style="margin:16px 0 0 0; font-size:16px; line-height:24px; color:#344054; padding-right: 20px;">
-                This is a reminder to complete the setup of your IronTrac account. <br> Your invitation is still pending and requires your action to activate access.
+                The user you invited, {{UserName}}, has successfully activated their IronTrac account on {{ActivationDate}} at {{ActivationTime}}.
               </p>
 
-              <p style="margin:16px 0 0 0; font-size:16px; line-height:24px; color:#344054; padding-right: 20px;">
-                To proceed, please click the link below and finish setting up your account: <span class="blue-links" style="color: #175FFF !important;">{{Activation Link}}</span>
+              <p style="margin:24px 0 0 0; font-size:16px; line-height:24px; color:#344054; padding-right: 20px;">
+                The user now has access to IronTrac based on the permissions assigned during the invitation process.
               </p>
 
-              <p style="margin:16px 0 0 0; font-size:16px; line-height:24px; color:#344054; padding-right: 20px;">
-                Please note that this invitation will expire on <span class="blue-links" style="color: #175FFF !important;">{{ExpirationDate}}</span>.  If the invitation expires before activation is completed, you will need to request a new invitation from your administrator.
-              </p>
-              
             </td>
           </tr>
 
@@ -147,7 +143,7 @@
                        font-size:14px;
                        color:#667085;
                        line-height:20px;">
-              If you believe you have received this email in error or need assistance, please contact the IronTrac support team at 
+              If you need to make any changes to the user’s access or require assistance, please contact the IronTrac support team at
               <a class="blue-links" href="#" style="color:#175FFF !important; text-decoration:none;">
                 {{support_email}}
               </a>
